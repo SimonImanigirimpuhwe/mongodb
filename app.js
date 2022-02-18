@@ -1,5 +1,5 @@
 const express = require("express");
-require("./models/db")
+// require("./models/db")
 const userRoutes = require("./routes/user")
 
 const app = express();
@@ -10,6 +10,8 @@ app.use(express.json())
 app.use("/users", userRoutes)
 
 
-const PORT = process.env.PORT || 3000
+app.use('/', (req, res) => {
+    res.status(200).json({message: 'Welcome to mongoDB course!'})
+});
 
-app.listen(PORT, () => console.log(`server running on port ${PORT}`))
+module.exports =  app
