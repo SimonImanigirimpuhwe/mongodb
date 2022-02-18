@@ -2,26 +2,16 @@
   "name": "mongodb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "jest": {
-    "verbose": true,
-    "testEnvironment": "node",
-    "coveragePathIgnorePatterns": [
-      "/node_modules"
-    ]
-  },
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "jest --forceExit --runInBand --detectOpenHandles"
+    "start": "nodemon app.js"
   },
   "author": "simon",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^12.0.3",
     "express": "^4.17.2",
-    "jest": "^27.4.7",
     "mongoose": "^6.1.6",
-    "nodemon": "^2.0.15",
-    "supertest": "^6.2.2"
+    "nodemon": "^2.0.15"
   }
 }
